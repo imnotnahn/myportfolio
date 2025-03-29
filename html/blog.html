@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/blog.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>My Blog</h1>
+            <div class="auth-buttons">
+                <button id="login-button"><i class="fas fa-sign-in-alt"></i> Login</button>
+                <button id="logout-button" style="display: none;"><i class="fas fa-sign-out-alt"></i> Logout</button>
+                <button class="home-button" onclick="window.location.href='../index.html'"><i class="fas fa-home"></i> Home</button>
+            </div>
+        </header>
+        
+        <div class="login-form" id="login-form">
+            <h2><i class="fas fa-lock"></i> Login</h2>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Enter your username">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password">
+            </div>
+            <button id="submit-login">Login</button>
+        </div>
+        
+        <div class="add-post-form" id="add-post-form">
+            <h2><i class="fas fa-edit"></i> Add New Blog Post</h2>
+            <div class="form-group">
+                <label for="post-title">Title</label>
+                <input type="text" id="post-title" placeholder="Enter post title">
+            </div>
+            <div class="form-group">
+                <label for="post-content">Content</label>
+                <textarea id="post-content" placeholder="Enter post content"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="post-image">Image</label>
+                <div class="file-input-container">
+                    <input type="file" id="post-image" accept="image/*">
+                    <label for="post-image" class="file-label"><i class="fas fa-upload"></i> Choose Image</label>
+                </div>
+                <div id="image-preview" class="image-preview"></div>
+            </div>
+            <button id="submit-post"><i class="fas fa-paper-plane"></i> Publish Post</button>
+        </div>
+        
+        <div class="blog-posts" id="blog-posts">
+        </div>
+    </div>
+    
+    <script src="/secrets/auth.js"></script>
+    <script src="/assets/js/blog.js"></script>
+</body>
+</html>
